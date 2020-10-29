@@ -24,12 +24,13 @@
                         //form.submit();
                     }
                 }).catch(err => {
+                    alert('Error while receiving OTP');
                     console.error(err);
                 });
             });
         }
         else {
-            console.error('OTPCredential not supported');
+            alert('OTPCredential not supported');
         }
     }
 

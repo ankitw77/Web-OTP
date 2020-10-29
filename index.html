@@ -9,13 +9,27 @@
     <title>Web OTP</title>
     <script type="text/javascript" src="otp.js"></script>
     <style>
-        .input{
+        .input,
+        form,
+        .instruction {
             display: block;
             margin: 20px 0;
         }
 
-        .btn{
+        .btn {
             margin-right: 10px;
+        }
+
+        .instruction {
+            padding: 10px 15px;
+            background-color: #f0f8ff;
+        }
+
+        .sms-text {
+            display: inline-block;
+            padding: 0 10px;
+            background-color: #faebd7;
+            margin: 10px 0;
         }
     </style>
 </head>
@@ -23,10 +37,17 @@
 <body>
     <form action="/" id="otp-form">
         <span>OTP here:</span>
-        <input type="text" id="input-otp" autocomplete="one-time-code" class="input" placeholder="Enter OTP" inputmode="numeric" />
+        <input type="text" id="input-otp" autocomplete="one-time-code" class="input" placeholder="Enter OTP"
+            inputmode="numeric" />
         <button class="btn" type="submit">Submit</button>
         <button class="btn" type="reset">Reset</button>
-
     </form>
+    <div class="instruction">
+        <div>Send your phone the following SMS text message from the another phone.</div>
+        <div class="sms-text">
+            <pre><code>Your OTP is: 123456.<br><br>@ankitw77.github.io #12345</code></pre>
+        </div>
+    </div>
 </body>
+
 </html>
